@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">E-Permit App</string>
+    <string name="e_permit">E-Permit</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="student_id">Student ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="app_logo">Application Logo</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="request_to_transfer">Request To Transfer</string>
+    <string name="request_to_borrow">Request To Borrow</string>
+    <string name="pending">Pending</string>
+    <string name="approved">Approved</string>
+    <string name="menu">Menu</string>
+    <string name="permit_to_transfer_form">Permit To Transfer Form</string>
+    <string name="what_event">What event</string>
+    <string name="date_destination">Date Destination</string>
+    <string name="from">From</string>
+    <string name="things_to_transfer">Things to transfer</string>
+    <string name="submit">Submit</string>
+    <string name="description_of_things">Description of things to transfer</string>
+</resources>
