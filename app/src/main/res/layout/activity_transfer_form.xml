@@ -1,155 +1,338 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient_background_form"
-    android:padding="32dp"
-    tools:context=".TransferFormActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/logo_oval_form"
-        android:contentDescription="@string/app_logo"
-        android:padding="16dp"
-        android:src="@drawable/ic_baseline_school_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textViewUniversity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-PERMIT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textViewSPMO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supply and Property Management Office (SPMO)"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textViewClearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clearance to MOVE/TRANSFER Furniture/Equipment"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date:" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/textViewControlNoLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Control No.:" />
+
+        <EditText
+            android:id="@+id/editTextControlNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/textViewDepartmentLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Department/Office:" />
+
+        <EditText
+            android:id="@+id/editTextDepartment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/textViewRequestingOfficerLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name of Requesting Officer:" />
+
+        <EditText
+            android:id="@+id/editTextRequestingOfficer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewSignatureLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Signature:" />
+
+        <EditText
+            android:id="@+id/editTextSignature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tvFormTitle"
+        android:id="@+id/textViewSirMadam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-condensed-bold"
-        android:text="@string/permit_to_transfer_form"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEvent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:hint="@string/what_event"
-        android:textColorHint="@color/dark_gray"
-        app:boxBackgroundMode="outline"
-        app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFormTitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEvent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilDate"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/date_destination"
-        android:textColorHint="@color/dark_gray"
-        app:boxBackgroundMode="outline"
-        app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilEvent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilFrom"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/from"
-        android:textColorHint="@color/dark_gray"
-        app:boxBackgroundMode="outline"
-        app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilDate">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFrom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:text="Sir/Madam:"
+        android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/tvThingsToTransferLabel"
-        android:layout_width="0dp"
+        android:id="@+id/textViewRequestIntro"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_button_teal"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/things_to_transfer"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilFrom" />
+        android:text="I would like to request for the following items:"
+        android:layout_marginTop="8dp" />
 
-    <EditText
-        android:id="@+id/etThingsDescription"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_edittext_multiline"
-        android:gravity="top|start"
-        android:hint="@string/description_of_things"
-        android:inputType="textMultiLine|text"
-        android:padding="12dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/dark_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvThingsToTransferLabel" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer / Relocation" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPullOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pull-out / Return" />
+
+        <CheckBox
+            android:id="@+id/checkBoxOfficeTables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office tables/Chairs" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFilingCabinets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filing Cabinets/Shelves" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others" />
+
+            <EditText
+                android:id="@+id/editTextOthers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Specify"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewQtyLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Qty."
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDescriptionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Description"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDateOfTransferLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Date of Transfer"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewLocationFromLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Location From"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewLocationToLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Location To"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRemarksLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Remarks"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp">
+
+        <LinearLayout
+            android:id="@+id/itemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <EditText
+                    android:id="@+id/editTextQty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/editTextDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:inputType="textMultiLine" />
+
+                <EditText
+                    android:id="@+id/editTextDateOfTransfer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/editTextLocationFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/editTextLocationTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/editTextRemarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/purple_500"
-        android:text="@string/submit"
-        android:textColor="@android:color/white"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etThingsDescription" />
-
-    <ImageView
-        android:id="@+id/ivMenu"
+        android:id="@+id/buttonAddItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:src="@drawable/ic_menu"
-        android:contentDescription="@string/menu"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="+ Add Item"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Request"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

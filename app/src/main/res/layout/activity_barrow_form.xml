@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUPPLY AND PROPERTY MANAGEMENT OFFICE (SPMO)"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERMIT TO BORROW"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
+
+        <!-- Date and Control No. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Date" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Control No." />
+        </LinearLayout>
+
+        <!-- Department -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Department/Office"
+            android:layout_marginTop="8dp" />
+
+        <!-- Name and Signature -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Name of Borrower" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Signature" />
+        </LinearLayout>
+
+        <!-- Project details -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sir/Madam: I would like to borrow the following items for:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name of Project" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date and Time of Project" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Venue" />
+
+        <!-- Table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray">
+
+            <!-- Table Header -->
+            <TableRow>
+                <TextView android:text="Qty." />
+                <TextView android:text="Description" />
+                <TextView android:text="Date of Transfer" />
+                <TextView android:text="Verified by" />
+                <TextView android:text="From" />
+                <TextView android:text="To" />
+                <TextView android:text="Date of Return" />
+                <TextView android:text="Verified by" />
+                <TextView android:text="Remarks" />
+            </TableRow>
+
+            <!-- Sample row -->
+            <TableRow>
+                <EditText android:hint="0" />
+                <EditText android:hint="Item" />
+                <EditText android:hint="MM/DD/YYYY" />
+                <EditText android:hint="Name" />
+                <EditText android:hint="From" />
+                <EditText android:hint="To" />
+                <EditText android:hint="MM/DD/YYYY" />
+                <EditText android:hint="Name" />
+                <EditText android:hint="Notes" />
+            </TableRow>
+
+            <!-- Add more TableRow blocks as needed -->
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

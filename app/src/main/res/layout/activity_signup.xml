@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background_signup"
+    android:background="@drawable/gradient_background_simple"
     android:padding="32dp"
     tools:context=".SignupActivity">
 
@@ -12,7 +12,7 @@
         android:id="@+id/ivLogo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:background="@drawable/logo_oval_signup"
+        android:background="@drawable/logo_oval_simple"
         android:contentDescription="@string/app_logo"
         android:padding="16dp"
         android:src="@drawable/ic_baseline_school_24"
